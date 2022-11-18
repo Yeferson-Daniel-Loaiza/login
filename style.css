@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.fondo {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  top: 80px;
+  left: 450px;
+  border-radius: 30px;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  display: flex;
+}
+.fondo::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    100deg,
+    rgba(115, 0, 255, 1) 0%,
+    rgba(86, 0, 191, 1) 100%
+  );
+  height: 150%;
+  animation: colors 3s infinite linear;
+  transition: all 0.2s linear;
+}
+@keyframes colors {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fondo::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 30px;
+}
+form {
+  width: 250px;
+  height: auto;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+form h1 {
+  padding: 20px;
+  color: white;
+  font-weight: 200;
+}
+form p {
+  color: white;
+  margin: 5px;
+  font-weight: 100;
+}
+.inputs {
+  display: block;
+}
+.inputs input:not(.submit) {
+  margin: 10px;
+  padding: 10px 0px;
+  border: solid 2px rgba(86, 0, 191, 1);
+  border-radius: 5px;
+  background: none;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+.submit {
+  background: rgba(86, 0, 191, 1);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+input::placeholder {
+  color: rgb(234, 234, 234);
+  font-weight: 100;
+  padding: 5px;
+}
+.alert{
+  background: red;
+  
+}
